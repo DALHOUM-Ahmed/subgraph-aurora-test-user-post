@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: users
@@ -30,7 +30,7 @@ dataSources:
         - Signup
       abis:
         - name: users
-          file: ./abis/users.json
+          file: users/abis/users.json
       eventHandlers:
         - event: AddTag(address,string)
           handler: handleAddTag
@@ -60,7 +60,7 @@ dataSources:
           handler: handleSetUsername
         - event: Signup(uint256,address,string,string,string,string,string,string,address,uint256,string,string,string)
           handler: handleSignup
-      file: ./src/users.ts
+      file: users/users.wasm
   - kind: ethereum
     name: posts
     network: aurora-testnet
@@ -79,7 +79,7 @@ dataSources:
         - UpdatePost
       abis:
         - name: posts
-          file: ./abis/posts.json
+          file: posts/abis/posts.json
       eventHandlers:
         - event: CreatePost(address,string,string,uint256,uint256,uint256)
           handler: handleCreatePost
@@ -89,4 +89,4 @@ dataSources:
           handler: handleUpdateBody
         - event: UpdatePost(address,uint256,string)
           handler: handleUpdatePost
-      file: ./src/posts.ts
+      file: posts/posts.wasm

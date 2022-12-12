@@ -2,6 +2,9 @@
   "aurora-testnet": {
     "users": {
       "address": "0x41B66678143FAce0E8b48A6b07E9F2Fdf45A497B"
+    },
+    "posts": {
+      "address": "0x5f8a20B00832ff02f467C37710988d11A5a5fbcD"
     }
   }
 }
